@@ -1,0 +1,13 @@
+{
+  "name": "kada-town",
+  "version": "1.0.0",
+  "private": true,
+  "license": "MIT",
+  "author": "fwzhuang",
+  "homepage": "https://fwzhuang.github.io/kada-town/",
+  "repository": { "type": "git", "url": "https://github.com/fwzhuang/kada-town.git" },
+  "bugs": { "url": "https://github.com/fwzhuang/kada-town/issues" },
+  "engines": { "node": ">=22" },
+  "description": "咔哒小镇：60 关离线机关路线解谜游戏",
+  "scripts": { "start": "node scripts/serve.js", "test": "node --test tests/*.test.js", "build": "node scripts/build.js" }
+}

@@ -1,0 +1,25 @@
+# Local source documents and historical packages
+*.docx
+*.pdf
+*.zip
+reference/
+level01_prototype.html
+level01_wireframe.svg
+
+# Generated deployment output and local tools
+_site/
+node_modules/
+coverage/
+*.log
+*.tmp
+.publish/
+.env
+.env.*
+.DS_Store
+Thumbs.db
+.codex/
+.agents/
+
+# Only the intentional README screenshot is published
+screenshots/*
+!screenshots/game-preview.jpg

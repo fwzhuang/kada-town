@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#f6f4eb">
+  <title>咔哒小镇 · 小小机关师的旅程</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="index.html" aria-label="咔哒小镇首页"><span class="brand-icon">✿</span><span>咔哒小镇<small>KADA TOWN</small></span></a>
+    <nav aria-label="游戏导航"><button id="map-button" class="nav-button">▦ <span>小镇地图</span></button><button id="journal-button" class="nav-button">▤ <span>冒险手记</span></button></nav>
+    <div class="top-actions"><span class="total-stars">★ <b id="total-stars">0</b><span> / 180</span></span><button id="sound-button" class="icon-button" aria-label="开启声音" title="开启声音">♫</button><button id="help-button" class="icon-button" aria-label="玩法说明" title="玩法说明">?</button></div>
+  </header>
+  <main>
+    <section class="heading"><div><div class="eyebrow" id="chapter-label">第一章 · 面包街</div><h1 id="level-title">第一次出发</h1><p id="level-subtitle">今天，让小镇重新飘起面包香。</p></div><div class="level-progress"><span id="level-number">01 <small>/ 60</small></span><div class="progress-track"><i id="progress-fill"></i></div><small id="chapter-progress">本章修复 0 / 12</small></div></section>
+    <div class="play-layout">
+      <section class="scene-panel" aria-label="关卡棋盘">
+        <div class="scene-top"><span><i class="status-dot"></i><span id="mode-label">准备出发</span></span><span id="grid-size">5 × 5 小镇</span></div>
+        <div class="scene" id="scene"><div class="cloud cloud-one"></div><div class="cloud cloud-two"></div><div class="scene-sign" id="scene-sign">BAKERY LANE</div><div id="board-frame" class="board-frame"><div id="column-labels" class="column-labels"></div><div id="row-labels" class="row-labels"></div><div id="board" class="board" role="group" aria-label="道路棋盘"></div><svg id="relations" class="relations" aria-hidden="true"></svg><div id="robot" class="robot-token" aria-hidden="true"></div></div><div class="scene-flower flower-one">✿</div><div class="scene-flower flower-two">✿</div><div class="scene-bottom"><span>✦ 一块小路，一个新可能</span><span id="placed-count">已放置 0 块</span></div></div>
+        <div class="dialogue"><div id="doudou-avatar" class="avatar"></div><div><b id="speaker">豆豆说</b><p id="message" role="status" aria-live="polite">把小路接起来，我们就能出发啦！</p></div></div>
+      </section>
+      <aside class="tool-panel">
+        <section class="mission"><div class="section-heading"><span class="section-icon">⚑</span><h2>今天的小任务</h2><span id="difficulty" class="pill">初次见面</span></div><p id="mission-text">帮豆豆走到面包店。</p><div id="objectives" class="objectives"></div></section>
+        <section class="pieces-section"><div class="section-heading"><span class="section-icon">▧</span><h2>你的零件盒</h2></div><p class="muted">选一块，再点格子放下。也可以拖动。</p><div id="inventory" class="inventory"></div><div class="rotation-tip"><span>↻</span><p>点击已放的小路，转个方向。<br><small>右键或使用橡皮擦，收回零件。</small></p></div><button id="erase-button" class="erase-button" aria-pressed="false">◇ 橡皮擦</button></section>
+        <section class="hint-section"><span class="hint-bulb">☼</span><p id="tip-text">先观察，再试试看。<br>每一次修改都是新发现。</p></section>
+        <div class="controls"><div class="small-controls"><button id="undo-button" title="撤销（Ctrl+Z）">↶ <span>撤销</span></button><button id="reset-button">⟳ <span>重置</span></button><button id="hint-button">☼ <span>提示</span></button></div><button id="start-button" class="primary-button">出发吧，豆豆 <span>▶</span></button></div>
+      </aside>
+    </div>
+    <footer class="game-footer"><span>慢慢想，放心试。小镇会等你。</span><span id="save-status">进度自动保存在这台设备</span></footer>
+  </main>
+  <dialog id="overlay"><div id="modal-content"></div></dialog>
+  <script src="src/engine.js"></script><script src="src/levels.js"></script><script src="src/art.js"></script><script src="src/app.js"></script>
+</body>
+</html>
